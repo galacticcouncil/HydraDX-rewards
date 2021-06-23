@@ -18,6 +18,7 @@ async function main() {
   const provider = new WsProvider(RPC);
   const keyring = new Keyring({ type: "sr25519" });
   const api = await ApiPromise.create({
+    provider,
     types: types,
     typesAlias: {
       tokens: {
